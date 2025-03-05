@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Admin Login - Ipsit Academy</title>
+    <style>
+        body {
+            background: #C9D6FF;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #E2E2E2, #C9D6FF);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #E2E2E2, #C9D6FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .container {
+            width: 400px;
+            margin:auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 50px;
+            text-align: center; /* Center align the text and icon */
+        }
+
+        h1 {
+            color: #ffffff;
+            background-image: linear-gradient(to right, #314755 0%, #26a0da  51%, #314755  100%);
+            padding: 20px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        h2 {
+            color: rgb(99, 97, 97);
+            font-weight: bold;
+        }
+
+        .error-message {
+            color: red;
+            text-align: center;
+            font-weight: bold;
+        }
+         
+        .btn-grad {
+            background-image: linear-gradient(to right, #314755 0%, #26a0da  51%, #314755  100%);
+            margin: 10px;
+            padding: 15px 45px;
+            text-align: center;
+            text-transform: uppercase;
+            transition: 0.5s;
+            background-size: 200% auto;
+            color: white;            
+            box-shadow: 0 0 20px #eee;
+            border-radius: 10px;
+            display: block;
+          }
+
+          .btn-grad:hover {
+            background-position: right center; /* change the direction of the change here */
+            color: #fff;
+            text-decoration: none;
+          }
+         
+        .input-group {
+            margin-bottom: 20px; 
+        }
+        
+        .input-group label {
+            display: block;
+            margin-bottom: 5px; 
+            font-weight: bold; 
+            color: #061161; 
+        }
+        
+        .input-group input[type="text"],
+        .input-group input[type="password"] {
+            width: 90%; 
+            padding: 12px; 
+            border-radius: 5px; 
+            border: 1px solid #ccc; 
+            background-color: rgba(255, 255, 255, 0.9); 
+            font-size: 16px; 
+            transition: border 0.3s; 
+        }
+        
+        .input-group input[type="text"]:focus,
+        .input-group input[type="password"]:focus {
+            border-color: #780206; 
+            outline: none; 
+        }
+
+        .login-icon {
+            font-size: 50px; /* Size of the icon */
+            margin-bottom: 20px; /* Space below the icon */
+            color: #061161; /* Icon color */
+        }
+        .bt{
+            height: 25px;
+            width: 50px;
+			border-radius: 35px 35px;
+		}
+		.bt:hover{
+			background-color: lightskyblue;
+			color:rgb(246, 246, 251);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <span class="material-icons login-icon">login</span> <!-- Login icon -->
+        <h2>WELCOME</h2>
+        <h1> Ipsit Academy</h1>
+        <h2>Admin Login</h2>
+        <form id="loginForm" method="POST">
+            <div class="input-group">
+                <label for="username">Username</label>
+               <input type="text" class="form-control" id="username" name="username" placeholder="Enter username" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                 <input type="password" class="form-control" id="password" name="password" placeholder="Enter password"
+                required>
+            </div>
+         <button type="submit" class="bt">Login</button>
+            <div class="error-message" id="errorMessage" style="display: none;">Wrong username or password</div>
+        </form>
+         {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+          {% for category, message in messages %}
+            <div class="alert alert-{{ category }}">{{ message }}</div>
+          {% endfor %}
+        {% endif %}
+      {% endwith %}
+
+</div>
+</body>
+</html>
