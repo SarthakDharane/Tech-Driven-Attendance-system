@@ -50,12 +50,17 @@ Make sure your project folder looks like this:
 
 📁 Smart-Attendance-System
 │
-├── app.py               # Main Flask Application
+
+├── app.py         # Main Flask Application
+
 ├── requirements.txt     # Required Packages
+
 ├── haarcascade_frontalface_default.xml # Face Detection Cascade
+
 ├── static/             # Static Files
 │   ├── faces/         # Registered User Faces
 │   └── face_recognition_model.pkl # Trained Model
+
 └── Attendance/         # Attendance CSV Files
 
 How to Run the Project
