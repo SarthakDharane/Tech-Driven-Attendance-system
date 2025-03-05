@@ -1,58 +1,38 @@
-# Tech-Driven-Attendance-system
+# TECH-DRIVEN ATTENDANCE SYSTEM
+
 This project is a Face Recognition-based Smart Attendance System built using Flask, OpenCV, and Machine Learning.
 
 Features
 
 Admin Login Authentication
-
 Face Registration System
-
 Face Recognition for Attendance
-
 Attendance Storage in CSV Files
-
 Multi-Subject Attendance
-
 Automatic Model Training
-
 Attendance Retake Option
-
 Real-time Camera Interface
-
 Tech Stack
-
 Python
-
 Flask
-
 OpenCV
-
 Scikit-Learn
-
 Joblib
-
 Pandas
-
 Waitress (Production WSGI Server)
 
+
 Prerequisites
-
 Make sure you have the following installed:
-
 Python 3.x
-
 pip
-
 Virtual Environment (optional but recommended)
-
 Git
 
 Installation
+1. Download the Project
 
-1. Clone the Repository
-
-git clone https://github.com/your_username/Smart-Attendance-System.git
-cd Smart-Attendance-System
+Download the project from the provided link or copy the project folder.
 
 2. Create Virtual Environment (Optional)
 
@@ -117,9 +97,7 @@ Make sure the haarcascade_frontalface_default.xml file is placed in the root dir
 The attendance data is stored inside the Attendance folder with the subject name and current date.
 
 License
-
 This project is for educational purposes only.
 
 Author
-
-SarthakDharane 
+SarthakDharane
